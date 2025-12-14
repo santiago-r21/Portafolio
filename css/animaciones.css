@@ -1,0 +1,58 @@
+
+/* KEYFRAME PARA ANIMACIÓN DE PARPADEO  */
+@keyframes neonFlicker {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 
+            0 0 7px #00ccff, 0 0 10px #00ccff, 0 0 21px #00ccff,  
+            0 0 42px #00aaff, 0 0 82px #00aaff, 0 0 92px #0077cc,  
+            0 0 102px #0077cc, 0 0 151px #0077cc;
+    }
+    50% {
+        opacity: 0.8; 
+        text-shadow: 
+            0 0 4px #00ccff, 0 0 7px #00ccff, 0 0 15px #00ccff,  
+            0 0 30px #00aaff, 0 0 60px #00aaff, 0 0 70px #0077cc,  
+            0 0 80px #0077cc, 0 0 120px #0077cc;
+    }
+}
+
+/* KEYFRAME DE ESTRELLA TITILANTE */
+@keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+/* KEYFRAMES PARA ESTRELLAS FUGACES */
+@keyframes tl_br {
+    0% { transform: translate(0vw, 0vh) rotate(-45deg); opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { transform: translate(100vw, 100vh) rotate(-45deg); opacity: 0; }
+}
+@keyframes tr_bl {
+    0% { transform: translate(0vw, 0vh) rotate(45deg); opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { transform: translate(-100vw, 100vh) rotate(45deg); opacity: 0; }
+}
+@keyframes bl_tr {
+    0% { transform: translate(0vw, 0vh) rotate(135deg); opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { transform: translate(100vw, -100vh) rotate(135deg); opacity: 0; }
+}
+@keyframes br_tl {
+    0% { transform: translate(0vw, 0vh) rotate(-135deg); opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { transform: translate(-100vw, -100vh) rotate(-135deg); opacity: 0; }
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 5));
+    }
+}

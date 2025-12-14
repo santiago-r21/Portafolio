@@ -1,0 +1,353 @@
+
+body, html {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #000000, #5607b7b5); 
+    overflow-x: hidden; 
+    min-height: 100%;    
+}
+
+body {
+    padding-top: 0; 
+    height: 100%;
+}
+
+.content {
+    position: relative;
+    z-index: 20;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    font-size: 1.2em;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.nav-tabs {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; 
+    z-index: 100; 
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+    background-color: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 0; 
+    border-top: none; 
+}
+
+.nav-tabs .nav-link {
+    color: #ffffff; 
+    text-shadow: 0 0 5px rgba(0, 204, 255, 0.5); 
+    background-color: transparent !important; 
+    border: none;
+    border-radius: 0;
+    border-color: transparent !important; 
+    margin: 0 10px; 
+}
+
+.nav-tabs .nav-link:hover {
+    color: #00ccff; 
+    border-color: #00ccff !important; 
+    text-shadow: 0 0 8px #00ccff; 
+}
+
+.nav-tabs .nav-link.active {
+    color: #00ccff !important; 
+    font-weight: bold;
+    border-bottom: 3px solid #00ccff !important; 
+}
+
+h1 {
+    font-size: 3.5em; 
+    margin-bottom: 20px; 
+    text-align: center;
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    color: #fff; 
+    text-shadow: 
+        0 0 7px #00ccff, 0 0 10px #00ccff, 0 0 21px #00ccff,  
+        0 0 42px #00aaff, 0 0 82px #00aaff, 0 0 92px #0077cc,  
+        0 0 102px #0077cc, 0 0 151px #0077cc;
+    animation: neonFlicker 1.5s ease-in-out infinite alternate;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.star {
+    position: absolute;
+    background-color: #ffffff; 
+    border-radius: 50%;
+    box-shadow: 
+        0 0 1px #00ccff, 0 0 4px #00ccff, 0 0 8px rgba(0, 204, 255, 0.5); 
+    filter: brightness(200%) drop-shadow(0 0 2px #00ccff); 
+    opacity: 0;
+    animation: twinkle 4s infinite ease-in-out;
+    z-index: 1; 
+    isolation: isolate; 
+    mix-blend-mode: screen; 
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;  
+    height: 2px; 
+    background-color: #00ccff; 
+    box-shadow: none; 
+    filter: brightness(250%) drop-shadow(0 0 2px #00ccff); 
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite; 
+    transform-origin: 0 0; 
+    z-index: 5; 
+    isolation: isolate; 
+    animation: tl_br 12s infinite linear;
+}
+
+/* ---------------------------------- */
+/* ESTRELLAS (ELEMENTOS DE FONDO) */
+/* ---------------------------------- */
+
+
+.bg-twinkle {
+    animation: twinkle 1s ease-in-out infinite alternate;
+}
+
+
+.shooting-star-tl_br, .shooting-star-tr_bl, 
+.shooting-star-bl_tr, .shooting-star-br_tl {
+    animation: tl_br 12s linear infinite; 
+}
+
+
+/* ********************************************************* */
+/* CLASE DE CONTROL: PAUSA DE ANIMACIONES */
+/* ********************************************************* */
+
+/* PAUSA para el titileo */
+.animations-paused .bg-twinkle {
+    animation-play-state: paused !important; 
+}
+
+/* PAUSA para las fugaces */
+.animations-paused .shooting-star-tl_br, 
+.animations-paused .shooting-star-tr_bl, 
+.animations-paused .shooting-star-bl_tr, 
+.animations-paused .shooting-star-br_tl {
+    animation-play-state: paused !important; 
+}
+
+.Bienbenida-section {
+    position: relative; 
+    margin-top: 0; 
+    min-height: calc(100vh - 80px); 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    padding-bottom: 0; 
+}
+
+.Bienbenida-section h1
+ {
+    text-align: center;
+
+}
+
+/*  SOBRE MÍ */
+.Sobre_mi-section {
+    display: block; 
+    text-align: center;
+    margin-top: 300px; 
+    padding-top: 50px; 
+    padding-bottom: 50px; 
+}
+
+#main-content {
+    width: 80%; 
+    margin: 0 auto;
+    z-index: 20; 
+    position: relative; 
+    padding-top: 50vh; 
+    padding-bottom: 50vh; 
+    min-height: auto; 
+}
+
+.scroll-spacer {
+    height: 150vh; 
+    width: 100%;
+    clear: both; 
+}
+
+.Sobre_mi-section {
+    display: block; 
+    text-align: center;
+}
+
+.Sobre_mi-content-flex {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 50px; 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    text-align: left; 
+}
+
+.Sobre_mi-des {
+    margin-top: 50px;
+    flex-basis: 60%; 
+    max-width: 60%;
+}
+
+.Sobre_mi-Foto {
+    flex-basis: 30%; 
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.profile-pic {
+    width: 100%; 
+    max-width: 250px; 
+    height: auto; 
+    border-radius: 5px; 
+    object-fit: cover; 
+    border: 3px solid #ff00ffa9; 
+    box-shadow: 
+        0 0 10px #6600ff9e, 
+        0 0 20px #450b96b7, 
+        0 0 40px rgba(255, 0, 255, 0.574); 
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05) rotate(2deg); 
+}
+
+/* MIS HABILIDADES */
+.Habilidades-section {
+    margin-top: 50px;
+    background-color: #10101096; 
+    min-height: 70vh; 
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+       border: 3px solid #ff00ffa9; /* Borde de Neón Rosa/Magenta */
+    box-shadow: 
+        0 0 10px #6600ff9e, 
+        0 0 20px #450b96b7, 
+        0 0 40px rgba(255, 0, 255, 0.574); 
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.Habilidades-header {
+    max-width: 800px;
+    margin-bottom: 50px; 
+}
+
+.Habilidades-intro {
+    font-size: 1.1em;
+    color: #cccccc;
+}
+
+
+.Habilidades-titulo {
+    color: #ff00ff; 
+    text-shadow: 0 0 5px #ff00ff;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* ---------------------------------- */
+/* ESTILOS DEL SLIDER INFINITO */
+/* ---------------------------------- */
+
+.Habilidades-carousel-container {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo para el slide */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.slider {
+    overflow: hidden; 
+    width: 100%;
+    position: relative; 
+}
+
+.slide-track {
+    display: flex;
+    /* Ancho: Nuevo ancho de slide (300px) * 10 logos */
+    width: calc(300px * 10); 
+    animation: scroll 20s linear infinite; 
+    -webkit-animation: scroll 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.slide {
+    /* Nuevo ancho para cada logo */
+    width: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    height: 80px; 
+    opacity: 0.7; 
+    transition: transform 0.3s, opacity 0.3s;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4));
+}
+
+.slide img:hover {
+    transform: scale(1.15); 
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(0, 204, 255, 0.8));
+}
+
+@media (max-width: 768px) {
+    .slide-track {
+        animation-play-state: paused;
+       
+        width: calc(200px * 10);
+        animation: scroll 15s linear infinite; 
+    }
+    .slide {
+        width: 200px;
+    }
+    .slide img {
+        height: 50px;
+    }
+}
+.proyectos-section{
+    margin-top: 20%;
+}
+.proyectos-header, proyectos-p{
+    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
+}
