@@ -595,6 +595,10 @@ p, span, li {
         padding: 0.5rem 0.3rem;
     }
 
+    .card-img-top {
+        height: 160px;
+    }
+
     .contacto-section {
         padding: 60px 15px;
     }
