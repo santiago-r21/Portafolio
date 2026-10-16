@@ -187,48 +187,38 @@ h2 {
     animation-play-state: paused !important; 
 }
 
-.Bienbenida-section {
-    position: relative; 
-    margin-top: 0; 
-    min-height: calc(100vh - 80px); 
+.Bienvenida {
+    position: relative;
+    margin-top: 0;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;    
-    padding-bottom: 0; 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
 }
 
-.Bienbenida-section h1
- {
+.Bienvenida h1 {
     text-align: center;
-
 }
 
 /*  SOBRE MÍ */
 .Sobre_mi-section {
-    display: block; 
+    display: block;
     text-align: center;
-    margin-top: 300px; 
-    padding-top: 50px; 
-    padding-bottom: 50px; 
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 #main-content {
-    width: 80%; 
+    width: 80%;
     margin: 0 auto;
-    z-index: 20; 
-    position: relative; 
-    padding-top: 50vh; 
-    padding-bottom: 50vh; 
-    min-height: auto; 
-}
-
-
-
-.Sobre_mi-section {
-    display: block; 
-    text-align: center;
+    z-index: 20;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 50vh;
+    min-height: auto;
 }
 
 .Sobre_mi-content-flex {
@@ -330,7 +320,7 @@ h2 {
 .slide-track {
     display: flex;
     width: calc(var(--slide-width) * var(--slide-count) * 2);
-    animation: scroll 40s linear infinite;
+    animation: scroll 72s linear infinite;
 }
 
 
@@ -347,7 +337,7 @@ h2 {
 
 :root {
     --slide-width: 300px;
-    --slide-count: 5;
+    --slide-count: 9;
     --nav-height: 80px;
      color-scheme: dark;
 }
@@ -376,6 +366,38 @@ h2 {
     filter: drop-shadow(0 0 8px rgba(0, 204, 255, 0.8));
 }
 
+.modal-title {
+    color: #fff;
+    text-shadow:
+        0 0 5px #00ccff, 0 0 10px #00ccff, 0 0 20px #0077cc;
+}
+
+.modal-body strong {
+    display: block;
+    margin-bottom: 16px;
+    color: #fff;
+    text-shadow:
+        0 0 5px #00ccff, 0 0 10px #00ccff, 0 0 20px #0077cc;
+}
+
+.modal-body p,
+.modal-body li {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+.card-img-top {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-img-top.logo-contain {
+    object-fit: contain;
+    background-color: #212529;
+    padding: 20px;
+}
+
 .proyectos-section{
     margin-top: 20%;
 }
@@ -384,14 +406,8 @@ h2 {
     align-items: center;
     text-align: center;
 }
-.contacto-section{
-    margin-top: 10%;
-    padding: 80px 20px 40px;
-}
-contacto-header{
-    margin-bottom: 60px;
-}
 .contacto-section {
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     padding: 120px 20px;
@@ -474,9 +490,13 @@ contacto-header{
 }
 
 
-#footer-header h3,h4,p {
-   
+.text-glow-azul {
     text-shadow: 0 0 8px #00ccff79;
+}
+
+#footer-header h3,
+#footer-header h4,
+#footer-header p {
     margin-bottom: 10px;
 }
 

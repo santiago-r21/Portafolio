@@ -149,8 +149,10 @@ if (skillTrack && skillSection) {
 
     sliderObserver.observe(skillSection);
 }
-const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-tabs .nav-link");
+const sections = Array.from(navLinks)
+  .map(link => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
 
 window.addEventListener("scroll", () => {
   let current = "";
